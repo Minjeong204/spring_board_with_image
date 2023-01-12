@@ -12,6 +12,7 @@ import com.myspring.pro30.member.dao.MemberDAO;
 import com.myspring.pro30.member.vo.MemberVO;
 
 
+
 @Service("memberService")
 @Transactional(propagation = Propagation.REQUIRED)
 public class MemberServiceImpl implements MemberService {

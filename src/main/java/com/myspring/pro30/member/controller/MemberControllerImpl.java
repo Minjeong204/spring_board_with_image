@@ -1,5 +1,6 @@
 package com.myspring.pro30.member.controller;
 
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -7,7 +8,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -97,6 +97,11 @@ public class MemberControllerImpl implements MemberController {
 
 		} else {
 			rAttr.addAttribute("result", "loginFailed");
+			response.setContentType("text/html; charset=utf-8");
+			PrintWriter w = response.getWriter();
+			w.write("<script>alert('로그인이 실패하였습니다.'); history.go(-1);</script>");
+			w.flush();
+			w.close();
 			mav.setViewName("redirect:/member/loginForm.do");
 		}
 		return mav;
@@ -109,7 +114,7 @@ public class MemberControllerImpl implements MemberController {
 		session.removeAttribute("member");
 		session.removeAttribute("isLogOn");
 		ModelAndView mav = new ModelAndView();
-		mav.setViewName("redirect:/member/listArticles.do");
+		mav.setViewName("redirect:/member/loginForm.do");
 		return mav;
 	}
 

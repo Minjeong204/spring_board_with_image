@@ -6,27 +6,9 @@
 <%
 request.setCharacterEncoding("UTF-8");
 %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>로그인창</title>
 
-<style type="text/css">
-fieldset {
-	width: 20%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
 
-button[type=submit] {
-	width:100%;
-	margin-top: 25px;
-}
-</style>
-<c:choose>
+<%-- <c:choose>
 	<c:when test="${result=='loginFailed' }">
 		<script>
 			window.onload = function() {
@@ -34,18 +16,16 @@ button[type=submit] {
 			}
 		</script>
 	</c:when>
-</c:choose>
-</head>
+</c:choose> --%>
 
-<body>
 	<form name="frmLogin" method="post"
 		action="${contextPath}/member/login.do">
 		<fieldset>
 			<h2>로그인</h2>
 			<div class="form-group">
-				<label for="exampleInputName" class="form-label mt-4">이름</label> <input
+				<label for="exampleInputName" class="form-label mt-4">아이디</label> <input
 					type="text" class="form-control" id="exampleInputName"
-					placeholder="이름을 입력하세요" name="id">
+					placeholder="아이디를 입력하세요" name="id">
 			</div>
 			<div class="form-group">
 				<label for="exampleInputPassword1" class="form-label mt-4">비밀번호</label>
@@ -58,5 +38,3 @@ button[type=submit] {
 		</fieldset>
 
 	</form>
-</body>
-</html>

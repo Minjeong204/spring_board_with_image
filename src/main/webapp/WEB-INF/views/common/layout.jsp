@@ -7,10 +7,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" >
-<link href="${contextPath}/resources/css/footer.css" rel="stylesheet" type="text/css">
-<link href="${contextPath}/resources/css/reset.css" rel="stylesheet" type="text/css">
-<link href="${contextPath}/resources/css/login.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<link href="${contextPath}/resources/css/bootstrap.min.css"
+	rel="stylesheet" type="text/css">
+
+<link href="${contextPath}/resources/css/footer.css" rel="stylesheet"
+	type="text/css">
+<link href="${contextPath}/resources/css/reset.css" rel="stylesheet"
+	type="text/css">
+<link href="${contextPath}/resources/css/login.css" rel="stylesheet"
+	type="text/css">
 <script src="${contextPath}/resources/js/bootstrap.bundle.min.js"
 	type="text/javascript"></script>
 <script src="${contextPath}/resources/jquery/jquery-1.6.2.min.js"
@@ -25,6 +32,12 @@
 	type="text/javascript"></script>
 <script src="${contextPath}/resources/jquery/carousel.js"
 	type="text/javascript"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<!-- Footer -->
+<script src="${contextPath}/resources/js/scripts.js"></script>
 <style>
 @font-face {
 	font-family: nanum;
@@ -40,13 +53,12 @@
 	text-align: center;
 	border: 0px solid #bcbcbc;
 } */
-
 * {
 	font-family: 'Noto Sans KR', sans-serif;
-	
 }
+
 a {
-  color: #333333;
+	color: #333333;
 }
 /*       #header {
         padding: 5px;
@@ -73,13 +85,47 @@ a {
 	float: left;
 	border: 0px solid #bcbcbc;
 } */
+fieldset {
+	width: 20%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
 
- #footer {
-	clear: both;
-	padding: 5px;
-	border: 0px solid #bcbcbc;
-	background-color: #f0f0f0;
-} 
+button[type=submit] {
+	width: 100%;
+	margin-top: 25px;
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn-secondary {
+	margin-right: 10px;
+}
+
+.user {
+	border: none;
+	background-color: transparent;
+	width: 100px;
+	pointer-events: none;
+}
+
+.user:hover {
+	background-color: transparent;
+	cusor: default;
+}
+
+.btn-secondary a {
+	color: #fff;
+}
 </style>
 <title><tiles:insertAttribute name="title" /></title>
 </head>
@@ -88,7 +134,7 @@ a {
 		<div id="header">
 			<tiles:insertAttribute name="header" />
 		</div>
-<%-- 		<div id="sidebar-left">
+		<%-- 		<div id="sidebar-left">
 			<tiles:insertAttribute name="side" />
 		</div> --%>
 		<div id="content">

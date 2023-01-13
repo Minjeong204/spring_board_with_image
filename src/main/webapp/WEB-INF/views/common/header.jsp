@@ -4,150 +4,58 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
-
-<style>
-.quick {
-	width: 1200px;
-	height: 45px;
-	margin: 0 auto;
-	text-align: right;
-	line-height: 45px;
-	float: right;
-	margin-right: 60px;
-}
-
-.quick li {
-	display: inline-block;
-	margin-left: 10px;
-	padding-left: 10px;
-	font-weight: bold;
-	color: #999999;
-}
-
-.quick li:first-child:hover, .quick li:nth-child(2):hover {
-	color: #000;
-}
-
-.quick li:first-child {
-	margin-left: 0;
-	background: none;
-	padding-left: 0;
-}
-
-.quick li:last-child {
-	background: none;
-	padding-left: 0;
-}
-
-.quick li:last-child a {
-	background-color: #aaaaaa;
-	color: #ffffff;
-	width: 65px;
-	height: 22px;
-	display: inline-block;
-	line-height: 22px;
-	text-align: center;
-	border-radius: 20px;
-}
-
-.quick li:last-child a:hover {
-	background-color: #373427;
-}
-
-a {
-	text-decoration: none;
-}
-
-.btn-secondary {
-	margin-right: 10px;
-}
-
-.user {
-	border: none;
-	background-color: transparent;
-	width: 100px;
-	pointer-events: none;
-}
-
-.user:hover {
-	background-color: transparent;
-	cusor: default;
-}
-
-.btn-secondary a {
-	color: #fff;
-}
-</style>
-
-<body>
-
-	<!--quick_wrap-->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="#">Navbar</a>
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarColor01"
-				aria-controls="navbarColor01" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarColor01">
-				<ul class="navbar-nav me-auto">
-					<c:choose>
-						<c:when
-							test="${isLogOn == true  && member!= null &&member.id=='admin'}">
-							<li class="nav-item"><a class="nav-link active"
-								href="${contextPath}/member/listMembers.do">회원관리 <span
-									class="visually-hidden">(current)</span>
-							</a></li>
-							<li class="nav-item"><a class="nav-link"
-								href="${contextPath}/board/listArticles.do">게시판 관리</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">상품 관리</a></li>
-						</c:when>
-						<c:otherwise>
-							<li class="nav-item"><a class="nav-link"
-								href="${contextPath}/board/listArticles.do">게시판 관리</a></li>
-							<li class="nav-item"><a class="nav-link" href="#">상품 관리</a></li>
-						</c:otherwise>
-					</c:choose>
-				</ul>
-				<%-- <div id="quick_wrap" class="d-flex">
-					<ul class="quick">
-						<c:choose>
-							<c:when test="${isLogOn == true  && member!= null}">
-								<li>${member.name }님!</li>
-								<li><a href="${contextPath}/member/logout.do">로그아웃</a></li>
-							</c:when>
-							<c:otherwise>
-								<li class="me-sm-2"><a href="${contextPath}/member/loginForm.do">로그인</a></li>
-								<li><a href="${contextPath}/member/memberForm.do">회원가입</a></li>
-							</c:otherwise>
-						</c:choose>
-					</ul>
-				</div> --%>
-				<form class="d-flex">
-					<c:choose>
-						<c:when test="${isLogOn == true  && member!= null}">
-							<button class="btn btn-secondary my-2 my-sm-0 user" type="button">
-								${member.name }님!</button>
-							<button class="btn btn-secondary my-2 my-sm-0" type="button">
-								<a href="${contextPath}/member/logout.do">로그아웃</a>
-							</button>
-						</c:when>
-						<c:otherwise>
-							<button class="btn btn-secondary my-2 my-sm-0" type="button">
-								<a href="${contextPath}/member/loginForm.do">로그인</a>
-							</button>
-							<button class="btn btn-secondary my-2 my-sm-0" type="button">
-								<a href="${contextPath}/member/memberForm.do">회원가입</a>
-							</button>
-						</c:otherwise>
-					</c:choose>
-				</form>
-			</div>
+<!--quick_wrap-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="${contextPath}/main.do">Simple Blog</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+			data-bs-target="#navbarColor01" aria-controls="navbarColor01"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarColor01">
+			<ul class="navbar-nav me-auto">
+				<c:choose>
+					<c:when
+						test="${isLogOn == true  && member!= null &&member.id=='admin'}">
+						<li class="nav-item"><a class="nav-link active"
+							href="${contextPath}/member/listMembers.do">회원관리 <span
+								class="visually-hidden">(current)</span>
+						</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="${contextPath}/board/listArticles.do">게시판 관리</a></li>
+						<!-- <li class="nav-item"><a class="nav-link" href="#">상품 관리</a></li> -->
+					</c:when>
+					<c:otherwise>
+						<li class="nav-item"><a class="nav-link"
+							href="${contextPath}/board/listArticles.do">게시판 관리</a></li>
+						<!-- <li class="nav-item"><a class="nav-link" href="#">상품 관리</a></li> -->
+					</c:otherwise>
+				</c:choose>
+			</ul>
+			<form class="d-flex">
+				<c:choose>
+					<c:when test="${isLogOn == true  && member!= null}">
+						<button class="btn btn-secondary my-2 my-sm-0 user" type="button">
+							${member.name }님!</button>
+						<button class="btn btn-secondary my-2 my-sm-0" type="button">
+							<a href="${contextPath}/member/logout.do">로그아웃</a>
+						</button>
+					</c:when>
+					<c:otherwise>
+						<button class="btn btn-secondary my-2 my-sm-0" type="button">
+							<a href="${contextPath}/member/loginForm.do">로그인</a>
+						</button>
+						<button class="btn btn-secondary my-2 my-sm-0" type="button">
+							<a href="${contextPath}/member/memberForm.do">회원가입</a>
+						</button>
+					</c:otherwise>
+				</c:choose>
+			</form>
 		</div>
-	</nav>
-	<script type="text/javascript">
+	</div>
+</nav>
+<script type="text/javascript">
 	var loopSearch = true;
 	function keywordSearch() {
 		if (loopSearch == false)
@@ -224,5 +132,3 @@ a {
 		}
 	});
 </script>
-</body>
-</html>

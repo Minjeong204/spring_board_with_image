@@ -1,103 +1,60 @@
-@charset "UTF-8";
-#footer_wrap {
-  background-color: #f0f0f0;
-  width: 103%;
-  height: 100%;
-  min-width: 1200px;
-}
-footer {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 50px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-}
-/* 하단 footer 로고 및 정보 */
-
-#footer_l {
-  color: #666666;
-  float: left;
-  width: 500px;
-}
-#footer_l h3 {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 12px;
-}
-#footer_l span {
-  display: block;
-  margin-top: 5px;
-}
-#footer_l p:nth-of-type(2) {
-  font-size: 13px;
-}
-#footer_l ul {
-  margin-top: 30px;
-  height: 25px;
-}
-#footer_l ul li {
-  float: left;
-  margin-right: 20px;
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
 }
 
-#footer_l ul li:last-child {
-  margin-left: 5px;
-  margin-top: 3px;
-}
-#footer_r {
-  float: left;
-  width: 696px;
-  height: 200px;
-}
-/* 하단 footer quick_menu */
-
-#footer_quick {
-  width: 340px;
-  height: 100px;
-  margin-top: 10px;
-  float: left;
-}
-#footer_r ul {
-  width: 170px;
-  height: 80px;
-  margin-right: 0;
-}
-#footer_r h4 {
-  color: #6837f8;
-  font-size: 14px;
-}
-#footer_r ul:nth-of-type(1) {
-  float: left;
-  margin-right: 0;
-}
-#footer_r ul:last-child {
-  float: right;
-}
-#footer_r ul li:first-child {
-  margin-top: 25px;
-}
-#footer_quick ul li {
-  color: #333333;
-  margin-top: 12px;
-  font-size: 14px;
-}
-#footer_quick ul li:hover {
-  text-decoration: underline;
-}
-/* 하단 footer familysite */
-
-#footer_family {
-  width: 340px;
-  float: right;
-  margin-top: 10px;
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
 }
 
-#footer_family ul li {
-  color: #333333;
-  margin-top: 12px;
-  font-size: 14px;
+.footer-basic li {
+  padding:0 10px;
 }
-#footer_family ul li:hover {
-  text-decoration: underline;
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
 }
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+

@@ -133,8 +133,8 @@ request.setCharacterEncoding("UTF-8");
 					test="${not empty article.imageFileName && article.imageFileName!='null' }">
 
 					<tr>
-						<td colspan="2" align="center"><input type="hidden" name="originalFileName"
-							value="${article.imageFileName }" /> <img
+						<td colspan="2" align="center"><input type="hidden"
+							name="originalFileName" value="${article.imageFileName }" /> <img
 							src="${contextPath}/download.do?articleNO=${article.articleNO}&imageFileName=${article.imageFileName}"
 							id="preview" /><br></td>
 					</tr>
@@ -165,24 +165,48 @@ request.setCharacterEncoding("UTF-8");
 					name="imageFileName " id="i_imageFileName" disabled
 					onchange="readURL(this);" /></td>
 			</tr>
-		</table>
+			</table>
 		</c:otherwise>
 		</c:choose>
 		<br>
+		<div class="form-group">
+			<label for="tr_date" class="form-label mt-4">등록일자</label> <input
+				type="text" class="form-control" id="tr_date"
+				aria-describedby="emailHelp"
+				value="<fmt:formatDate value="${article.writeDate}" />"
+				disabled="disabled">
+		</div>
+		<table>
+			<tr id="tr_btn_modify">
+				<td colspan="2">
+					<div class="d-grid gap-2">
+						<button type="button" class="btn btn-lg btn-warning"
+							onClick="fn_modify_article(frmArticle)">수정반영하기</button>
+					</div>
 
-		<!-- 이미지파일 첨부: <input type="file" name="imageFileName"
+					<div class="d-grid gap-2">
+						<button type="button" class="btn btn-lg btn-secondary"
+							onClick="backToList(frmArticle)">취소</button>
+					</div>
+				</td>
+			</tr>
+
+			<!-- 이미지파일 첨부: <input type="file" name="imageFileName"
 		onchange="readURL(this);" /> <img id="preview" src="#" width=200
 		height=200 /> 이미지파일 첨부 <input type="button" value="파일 추가"
 		onClick="fn_addFile()" /> -->
 
-		<div id="d_file"></div>
+			<div id="d_file"></div>
 
-		<button type="submit" class="btn btn-secondary">글쓰기</button>
-		<div class="d-grid gap-2">
-			<button type="button" class="btn btn-lg btn-primary"
-				onClick="backToList(this.form)">목록보기</button>
-		</div>
-		<!-- <input type="submit" value="글쓰기" /> -->
-		<!-- <input type=button value="목록보기" onClick="backToList(this.form)" /> -->
+			<button type="submit" class="btn btn-secondary">글쓰기</button>
+			<div class="d-grid gap-2">
+				<button type="button" class="btn btn-lg btn-primary"
+					onClick="backToList(this.form)">목록보기</button>
+			</div>
+
+
+			<!-- <input type="submit" value="글쓰기" /> -->
+			<!-- <input type=button value="목록보기" onClick="backToList(this.form)" /> -->
+		</table>
 	</form>
 </div>

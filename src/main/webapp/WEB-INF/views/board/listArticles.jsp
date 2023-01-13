@@ -61,14 +61,14 @@ request.setCharacterEncoding("UTF-8");
 					</tr>
 				</c:when>
 				<c:when test="${articlesList !=null }">
-					<c:forEach var="article" items="${articlesList }"
+					<c:forEach var="article" items="${articlesList}"
 						varStatus="articleNum">
 						<tr align="center">
-							<td width="5%">${articleNum.count}</td>
-							<td width="10%">${article.id }</td>
+							<td width="5%">${article.articleNO}</td>
+							<td width="10%">${article.id}</td>
 							<td align='center'><span></span> <c:choose>
 									<c:when test='${article.level > 1 }'>
-										<c:forEach begin="1" end="${article.level }" step="1">
+										<c:forEach begin="1" end="${article.level}" step="1">
 											<span></span>
 										</c:forEach>
 										<span style="font-size: 12px;">[답변]</span>
@@ -77,7 +77,7 @@ request.setCharacterEncoding("UTF-8");
 									</c:when>
 									<c:otherwise>
 										<a
-											href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}">${article.title }</a>
+											href="${contextPath}/board/viewArticle.do?articleNO=${article.articleNO}">${article.title}</a>
 									</c:otherwise>
 								</c:choose></td>
 							<td width="10%">${article.writeDate}</td>

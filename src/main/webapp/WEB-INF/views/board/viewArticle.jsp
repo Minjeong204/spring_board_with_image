@@ -198,11 +198,38 @@ request.setCharacterEncoding("UTF-8");
 
 			<div id="d_file"></div>
 
-			<button type="submit" class="btn btn-secondary">글쓰기</button>
+			<!-- 			<button type="submit" class="btn btn-secondary">글쓰기</button>
 			<div class="d-grid gap-2">
 				<button type="button" class="btn btn-lg btn-primary"
 					onClick="backToList(this.form)">목록보기</button>
-			</div>
+			</div> -->
+			<tr id="tr_btn">
+				<td colspan="2" align="center"><c:if
+						test="${member.id == article.id }">
+						<%-- <input type=button value="수정하기" onClick="fn_enable(this.form)">
+						<input type=button value="삭제하기"
+							onClick="fn_remove_article('${contextPath}/board/removeArticle.do', ${article.articleNO})"> --%>
+						<div class="d-grid gap-2">
+							<button type="button" class="btn btn-lg btn-warning"
+								onClick="fn_enable(this.form)">수정하기</button>
+						</div>
+						<div class="d-grid gap-2">
+							<button type="button" class="btn btn-lg btn-warning"
+								onClick="fn_remove_article('${contextPath}/board/removeArticle.do', ${article.articleNO})">삭제하기</button>
+						</div>
+
+
+					</c:if>
+					<div class="d-grid gap-2">
+						<button type="button" class="btn btn-lg btn-secondary"
+							onClick="backToList(frmArticle)">리스트로 돌아가기</button>
+					</div>
+					<input type=button value="리스트로 돌아가기"
+					onClick="backToList(this.form)"> <%-- <input type=button
+					value="답글쓰기"
+					onClick="fn_reply_form('${contextPath}/board/replyForm.do', ${article.articleNO})"> --%>
+				</td>
+			</tr>
 
 
 			<!-- <input type="submit" value="글쓰기" /> -->

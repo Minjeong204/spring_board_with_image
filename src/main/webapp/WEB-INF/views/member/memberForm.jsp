@@ -12,7 +12,7 @@ request.setCharacterEncoding("UTF-8");
 			<div class="form-group row">
 				<div class="form-group">
 					<label for="exampleInputId1" class="form-label mt-4">아이디</label> <input
-						type="email" class="form-control" id="exampleInputId1"
+						type="text" class="form-control" id="exampleInputId1"
 						aria-describedby="emailHelp" placeholder="아이디를 입력하세요" name="id" />
 				</div>
 				<div class="form-group">
@@ -22,7 +22,7 @@ request.setCharacterEncoding("UTF-8");
 				</div>
 				<div class="form-group">
 					<label for="exampleInputName" class="form-label mt-4">이름</label> <input
-						type="email" class="form-control" id="exampleInputName"
+						type="text" class="form-control" id="exampleInputName"
 						aria-describedby="emailHelp" placeholder="이름을 입력하세요" name="name" />
 				</div>
 				<div class="form-group">

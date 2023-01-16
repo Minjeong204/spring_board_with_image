@@ -112,8 +112,7 @@ request.setCharacterEncoding("UTF-8");
 								id="preview" /><br></td>
 						</tr>
 						<tr>
-							<td></td>
-							<td>
+							<td colspan="2">
 								<div class="form-group">
 									<label for="formFile" class="form-label mt-4">이미지 파일 첨부</label>
 									<input class="form-control" type="file" name="imageFileName "
@@ -142,9 +141,9 @@ request.setCharacterEncoding("UTF-8");
 					</c:otherwise>
 				</c:choose>
 				<tr>
-					<td width="150" align="center" bgcolor="#FF9933">등록일자</td>
+					<td  width="150" align="center" bgcolor="#FF9933">등록일자</td>
 					<td><input type=text
-						value="<fmt:formatDate value="${article.writeDate}" />" disabled />
+						value="<fmt:formatDate value="${article.writeDate}"  />" disabled />
 					</td>
 				</tr>
 				<tr id="tr_btn_modify" align="center">

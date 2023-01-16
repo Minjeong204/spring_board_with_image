@@ -8,7 +8,7 @@ request.setCharacterEncoding("UTF-8");
 %>
 
 
-
+<div class="wrap">
 	<form name="frmLogin" method="post"
 		action="${contextPath}/member/login.do">
 		<fieldset>
@@ -29,3 +29,4 @@ request.setCharacterEncoding("UTF-8");
 		</fieldset>
 
 	</form>
+</div>

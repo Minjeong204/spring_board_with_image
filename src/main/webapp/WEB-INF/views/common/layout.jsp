@@ -16,8 +16,6 @@
 	type="text/css">
 <link href="${contextPath}/resources/css/reset.css" rel="stylesheet"
 	type="text/css">
-<link href="${contextPath}/resources/css/login.css" rel="stylesheet"
-	type="text/css">
 <script src="${contextPath}/resources/js/bootstrap.bundle.min.js"
 	type="text/javascript"></script>
 <script src="${contextPath}/resources/jquery/jquery-1.6.2.min.js"
@@ -99,7 +97,7 @@ a {
 
 .wrap {
 	margin-top: 50px;
-	width: 70%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 	width: 70%;

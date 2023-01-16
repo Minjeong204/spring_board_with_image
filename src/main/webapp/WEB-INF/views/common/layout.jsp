@@ -86,7 +86,7 @@ a {
 	border: 0px solid #bcbcbc;
 } */
 fieldset {
-	width: 20%;
+	width:250px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;

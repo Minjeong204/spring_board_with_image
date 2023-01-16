@@ -47,12 +47,6 @@
 	src: url("../font/NanumGothic.woff") format("woff");
 }
 
-/* #container {
-	width: 100%;
-	margin: 0px auto;
-	text-align: center;
-	border: 0px solid #bcbcbc;
-} */
 * {
 	font-family: 'Noto Sans KR', sans-serif;
 }
@@ -60,33 +54,9 @@
 a {
 	color: #333333;
 }
-/*       #header {
-        padding: 5px;
-        margin-bottom: 5px;
-        border: 0px solid #bcbcbc;
-         background-color: lightgreen;
-      } */
-/* #sidebar-left {
-	width: 15%;
-	height: 700px;
-	padding: 5px;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	float: left;
-	background-color: yellow;
-	border: 0px solid #bcbcbc;
-	font-size: 10px;
-} */
 
-/* #content {
-	width: 75%;
-	padding: 5px;
-	margin-right: 5px;
-	float: left;
-	border: 0px solid #bcbcbc;
-} */
 fieldset {
-	width:250px;
+	width: 250px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;
@@ -125,6 +95,54 @@ a {
 
 .btn-secondary a {
 	color: #fff;
+}
+
+.wrap {
+	margin-top: 50px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	margin-bottom: 50px;
+}
+
+.btn-primary {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.btn-primary a {
+	color: #fff;
+}
+
+#tr_file_upload {
+	display: none;
+}
+
+#tr_btn_modify {
+	display: none;
+}
+
+#tr_btn button {
+	margin-top: 15px;
+}
+
+#tr_btn button:first-child {
+	margin-left: 150px;
+}
+
+#tr_btn_modify {
+	width: 315%;
+	margin-top: 15px;
+}
+
+#tr_btn_modify button {
+	margin-left: 10px;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
 }
 </style>
 <title><tiles:insertAttribute name="title" /></title>

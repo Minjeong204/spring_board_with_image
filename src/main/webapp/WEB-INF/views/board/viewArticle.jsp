@@ -10,46 +10,6 @@ request.setCharacterEncoding("UTF-8");
 <head>
 <meta charset="UTF-8">
 <title>글보기</title>
-<style>
-#tr_file_upload {
-	display: none;
-}
-
-#tr_btn_modify {
-	display: none;
-}
-
-#tr_btn button {
-	margin-top: 15px;
-}
-
-#tr_btn button:first-child {
-	margin-left: 150px;
-}
-
-#tr_btn_modify {
-	width: 315%;
-	margin-top: 15px;
-}
-
-#tr_btn_modify button {
-	margin-left: 10px;
-}
-
-table {
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.wrap {
-	margin-top: 50px;
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
-	margin-bottom: 50px;
-}
-</style>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script type="text/javascript">
      function backToList(obj){

@@ -6,28 +6,7 @@
 <%
 request.setCharacterEncoding("UTF-8");
 %>
-<!DOCTYPE html>
-<html>
 <head>
-<style>
-.wrap {
-	margin-top: 50px;
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
-	margin-bottom: 50px;
-}
-
-.btn-primary {
-	width: 100%;
-	margin-top: 30px;
-}
-
-.btn-primary a {
-	color: #fff;
-}
-</style>
 <meta charset="UTF-8">
 <title>글목록창</title>
 </head>

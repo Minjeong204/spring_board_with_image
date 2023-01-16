@@ -33,25 +33,6 @@ request.setCharacterEncoding("UTF-8");
 		cnt++;
 	}
 </script>
-<style>
-.wrap {
-	margin-top: 50px;
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
-	margin-bottom: 50px;
-}
-
-.btn-primary {
-	width: 100%;
-	margin-top: 30px;
-}
-
-.btn-primary a {
-	color: #fff;
-}
-</style>
 <div class="wrap">
 	<h2 >글쓰기</h2>
 	<form name="articleForm" method="post"

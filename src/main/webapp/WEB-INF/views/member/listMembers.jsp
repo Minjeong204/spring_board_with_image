@@ -8,20 +8,9 @@ request.setCharacterEncoding("UTF-8");
 %>
 
 
-<html>
 <head>
 <meta charset=UTF-8">
 <title>회원 정보 출력창</title>
-<style type="text/css">
-.wrap {
-	margin-top: 50px;
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
-	margin-bottom: 50px;
-}
-</style>
 </head>
 <body>
 	<div class="wrap">

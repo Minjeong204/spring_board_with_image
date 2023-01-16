@@ -89,7 +89,7 @@ request.setCharacterEncoding("UTF-8");
 		<div id="d_file"></div>
 
 		<button type="button" class="btn btn-info" onClick="fn_addFile()">파일추가</button>
-		<button type="submit" class="btn btn-secondary">글쓰기</button>
+		<button type="submit" class="btn btn-secondary btn-lg">글쓰기</button>
 		<div class="d-grid gap-2">
 			<button type="button" class="btn btn-lg btn-primary"
 				onClick="backToList(this.form)">목록보기</button>

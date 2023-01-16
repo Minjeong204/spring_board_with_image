@@ -49,22 +49,32 @@
 
 ### 게시판 조회 화면
 ![image](https://user-images.githubusercontent.com/97210509/212591120-85961d67-e5ac-41ad-ba8f-1000c7e4c73c.png)
-<br> 데스크탑 화면
+
+<br> 데스크탑 화면 <br>
+
 ![image](https://user-images.githubusercontent.com/97210509/212603402-e923fe40-b9dc-4891-b8a4-d3fbcfa0c99d.png)
+
 <br> 모바일 화면
+
 <br>자신이 쓴 글이 아닐 때
 
 ![image](https://user-images.githubusercontent.com/97210509/212591229-52db8373-74dd-4fb4-a298-31eaed8e05e6.png)
+
 <br> 데스크탑 화면
+
 ![image](https://user-images.githubusercontent.com/97210509/212603645-b7f6a66c-c3b6-4998-b1ef-a56bdffb1467.png)
+
 <br> 모바일 
+
 <br> 자신이 쓴 글 일 때
 
 ### 게시판 작성 화면
 ![image](https://user-images.githubusercontent.com/97210509/212591307-668686f4-8544-45bd-96b2-db68412b4851.png)
+
 <br> 데스크탑 화면<br>
 
 ![image](https://user-images.githubusercontent.com/97210509/212591411-83a08ac8-4b89-436a-be5b-dcb30a631382.png)
+
 <br> 모바일 화면
 
 ### 관리자용 회원관리 화면

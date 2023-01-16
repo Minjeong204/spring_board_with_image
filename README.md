@@ -38,13 +38,19 @@
 <br> 관리자가 아닐 시, 회원관리탭은 보이지않음
 
 ### 로그인 화면
-![image](https://user-images.githubusercontent.com/97210509/212590954-cbb55462-d560-4c49-a6cf-718da385452c.png)
+![image](https://user-images.githubusercontent.com/97210509/212603226-8ba66084-1d95-4bd0-8639-12c70de96572.png)
+
+<br> 모바일 화면
+![image](https://user-images.githubusercontent.com/97210509/212603280-3fff6dc2-0c14-4f92-8b8f-77842a10aeb4.png)
+
 
 ### 게시판 화면
 ![image](https://user-images.githubusercontent.com/97210509/212591053-ea572d2c-1ac0-4f89-b8a8-ec11e7f6b556.png)
 
 ### 게시판 조회 화면
 ![image](https://user-images.githubusercontent.com/97210509/212591120-85961d67-e5ac-41ad-ba8f-1000c7e4c73c.png)
+![image](https://user-images.githubusercontent.com/97210509/212603402-e923fe40-b9dc-4891-b8a4-d3fbcfa0c99d.png)
+<br> 모바일 화면
 자신이 쓴 글이 아닐 때
 
 ![image](https://user-images.githubusercontent.com/97210509/212591229-52db8373-74dd-4fb4-a298-31eaed8e05e6.png)

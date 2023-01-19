@@ -142,6 +142,11 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.reply {
+	width: 100%;
+	margin-left: 150px;
+}
 </style>
 <title><tiles:insertAttribute name="title" /></title>
 </head>

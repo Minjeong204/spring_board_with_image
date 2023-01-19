@@ -173,8 +173,8 @@ request.setCharacterEncoding("UTF-8");
 						<button type=button value="리스트로 돌아가기"
 							onClick="backToList(this.form)" class="btn btn-primary">리스트로
 							돌아가기</button>
-						<button type=button value="답글쓰기"
-							onClick="fn_reply_form('${isLogOn}','${isLogOn}${contextPath}/board/replyForm.do', ${article.articleNO})">답글쓰기</button></td>
+						<button type=button value="답글쓰기" class="btn btn-warning reply"
+							onClick="fn_reply_form('${isLogOn}','${contextPath}/board/replyForm.do', ${article.articleNO})">답글쓰기</button></td>
 				</tr>
 			</table>
 		</form>

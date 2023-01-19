@@ -11,7 +11,8 @@
 
 ### 클래스 다이어그램
 
-![image](https://user-images.githubusercontent.com/97210509/212589872-37d6a360-0631-4a75-aa47-847c849271d4.png)
+![image](https://user-images.githubusercontent.com/97210509/213359986-e4d8b16e-a845-4fdd-b183-fbdf09b84ae6.png)
+
 <br>게시판 관련 다이어그램
 
 ![image](https://user-images.githubusercontent.com/97210509/212589920-78c25f91-fee6-4439-ac64-11c25dd3df30.png)

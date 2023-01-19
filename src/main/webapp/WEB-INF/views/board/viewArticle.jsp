@@ -141,7 +141,7 @@ request.setCharacterEncoding("UTF-8");
 					</c:otherwise>
 				</c:choose>
 				<tr>
-					<td  width="150" align="center" bgcolor="#FF9933">등록일자</td>
+					<td width="150" align="center" bgcolor="#FF9933">등록일자</td>
 					<td><input type=text
 						value="<fmt:formatDate value="${article.writeDate}"  />" disabled />
 					</td>
@@ -167,7 +167,9 @@ request.setCharacterEncoding("UTF-8");
 						</c:if>
 						<button type=button value="리스트로 돌아가기"
 							onClick="backToList(this.form)" class="btn btn-primary">리스트로
-							돌아가기</button></td>
+							돌아가기</button>
+						<button type=button value="답글쓰기"
+							onClick="fn_reply_form('${contextPath}/board/replyForm.do', ${article.articleNO})">답글쓰기</button></td>
 				</tr>
 			</table>
 		</form>

@@ -22,4 +22,7 @@ public interface BoardController {
 	public ResponseEntity  removeArticle(@RequestParam("articleNO") int articleNO,
                               HttpServletRequest request, HttpServletResponse response) throws Exception;
 
+	 ResponseEntity addReply(MultipartHttpServletRequest multipartRequest, HttpServletResponse response)
+				throws Exception;
+
 }

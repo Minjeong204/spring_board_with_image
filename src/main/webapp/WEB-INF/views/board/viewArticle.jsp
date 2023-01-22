@@ -3,11 +3,11 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="contextPath" value="${pageContext.request.contextPath}" />
-<%-- 
-<c:set var="article"  value="${articleMap.article}"  />
-<c:set var="imageFileList"  value="${articleMap.imageFileList}"  />
 
- --%>
+<c:set var="article" value="${articleMap.article}" />
+<c:set var="imageFileList" value="${articleMap.imageFileList}" />
+
+
 <%
 request.setCharacterEncoding("UTF-8");
 %>
@@ -19,6 +19,10 @@ request.setCharacterEncoding("UTF-8");
 
 #tr_btn_modify {
 	display: none;
+}
+
+.tr_modEnable {
+	visibility: hidden;
 }
 
 .wrap {
@@ -53,6 +57,7 @@ request.setCharacterEncoding("UTF-8");
 		document.getElementById("tr_btn_modify").style.display = "block";
 		document.getElementById("tr_file_upload").style.display = "block";
 		document.getElementById("tr_btn").style.display = "none";
+		$(".tr_modEnable").css('visibility', 'visible');
 	}
 
 	function fn_modify_article(obj) {
@@ -144,7 +149,8 @@ request.setCharacterEncoding("UTF-8");
 						</tr>
 						<tr class="tr_modEnable">
 							<td></td>
-							<td><input type="file" class="form-control" name="imageFileName${status.index }"
+							<td><input type="file" class="form-control"
+								name="imageFileName${status.index }"
 								id="i_imageFileName${status.index }"
 								onchange="readURL(this, ${status.index });" /> <input
 								type="button" class="btn btn-danger" value="이미지 삭제하기"
@@ -182,70 +188,66 @@ request.setCharacterEncoding("UTF-8");
 					onclick="fn_addModImage(${img_index})" /></td>
 			</tr>
 			<br>
-			<div class="form-group">
-				<label for="tr_date" class="form-label mt-4">등록일자</label> <input
-					type="text" class="form-control" id="tr_date"
+			<tr>
+				<td><label for="tr_date" class="form-label mt-4">등록일자</label></td>
+				<td><input type="text" class="form-control" id="tr_date"
 					aria-describedby="emailHelp"
 					value="<fmt:formatDate value="${article.writeDate}" />"
-					disabled="disabled">
-			</div>
-			<table>
-				<tr id="tr_btn_modify">
-					<td colspan="2">
-						<div class="d-grid gap-2">
-							<button type="button" class="btn btn-lg btn-warning"
-								onClick="fn_modify_article(frmArticle)">수정반영하기</button>
-						</div>
+					disabled="disabled"></td>
+			</tr>
+			<tr id="tr_btn_modify" align="center">
+				<td align="center"><button type=button id="tr_btn_modify"
+						onClick="fn_modify_article(frmArticle)" class="btn btn-warning">수정반영하기</button>
+				</td>
+				<td align="center">
+					<button type=button onClick="backToList(frmArticle)" id="tr_btn_modify"
+						class="btn btn-danger">취소</button>
+				</td>
+			</tr>
 
-						<div class="d-grid gap-2">
-							<button type="button" class="btn btn-lg btn-secondary"
-								onClick="backToList(frmArticle)">취소</button>
-						</div>
-					</td>
-				</tr>
-
-				<!-- 이미지파일 첨부: <input type="file" name="imageFileName"
+			<!-- 이미지파일 첨부: <input type="file" name="imageFileName"
 		onchange="readURL(this);" /> <img id="preview" src="#" width=200
 		height=200 /> 이미지파일 첨부 <input type="button" value="파일 추가"
 		onClick="fn_addFile()" /> -->
 
-				<div id="d_file"></div>
+			<div id="d_file"></div>
 
-				<!-- 			<button type="submit" class="btn btn-secondary">글쓰기</button>
+			<!-- 			<button type="submit" class="btn btn-secondary">글쓰기</button>
 			<div class="d-grid gap-2">
 				<button type="button" class="btn btn-lg btn-primary"
 					onClick="backToList(this.form)">목록보기</button>
 			</div> -->
-				<tr id="tr_btn">
-					<td colspan="2" align="center"><c:if
-							test="${member.id == article.id }">
-							<%-- <input type=button value="수정하기" onClick="fn_enable(this.form)">
+			<tr id="tr_btn">
+				<td colspan="2" align="center"><c:if
+						test="${member.id == article.id }">
+						<%-- <input type=button value="수정하기" onClick="fn_enable(this.form)">
 						<input type=button value="삭제하기"
 							onClick="fn_remove_article('${contextPath}/board/removeArticle.do', ${article.articleNO})"> --%>
-							<div class="d-grid gap-2">
-								<button type="button" class="btn btn-lg btn-warning"
-									onClick="fn_enable(this.form)">수정하기</button>
-							</div>
-							<div class="d-grid gap-2">
-								<button type="button" class="btn btn-lg btn-warning"
-									onClick="fn_remove_article('${contextPath}/board/removeArticle.do', ${article.articleNO})">삭제하기</button>
-							</div>
+
+						<button type="button" class="btn btn-lg btn-warning"
+							onClick="fn_enable(this.form)" >수정하기</button>
 
 
-						</c:if>
-						<div class="d-grid gap-2">
-							<button type="button" class="btn btn-lg btn-secondary"
-								onClick="backToList(frmArticle)">리스트로 돌아가기</button>
-						</div> <input type=button value="리스트로 돌아가기"
-						onClick="backToList(this.form)"> <%-- <input type=button
+						<button type="button" class="btn btn-lg btn-danger"
+							onClick="fn_remove_article('${contextPath}/board/removeArticle.do', ${article.articleNO})">삭제하기</button>
+
+
+
+					</c:if>
+					<div class="d-grid gap-2">
+						<button type="button" class="btn btn-lg btn-secondary"
+							onClick="backToList(frmArticle)">리스트로 돌아가기</button>
+					</div> <!-- <input type=button value="리스트로 돌아가기"
+						onClick="backToList(this.form)"> --> <%-- <input type=button
 					value="답글쓰기"
 					onClick="fn_reply_form('${contextPath}/board/replyForm.do', ${article.articleNO})"> --%>
-					</td>
-				</tr>
+				</td>
+			</tr>
 
 
-				<!-- <input type="submit" value="글쓰기" /> -->
-				<!-- <input type=button value="목록보기" onClick="backToList(this.form)" /> -->
-			</table>
+			<!-- <input type="submit" value="글쓰기" /> -->
+			<!-- <input type=button value="목록보기" onClick="backToList(this.form)" /> -->
+		</table>
+
 	</form>
 </div>

@@ -5,7 +5,7 @@
 ## 요구사항 명세서
 ![image](https://user-images.githubusercontent.com/97210509/213353400-5df2e6a0-7ccf-4ba8-b4c2-35842caf5a61.png)
 
-
+=> 리뷰기능 추가를 위해 여러 이미지 첨부, 이미지 수정 기능 보류중
 
 ## 다이어그램
 

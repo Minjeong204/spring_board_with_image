@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* wrap부분 */
+#wrap {
+  width: 350px;
+  height: 575px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+#wrap h3 {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+/* 광고 */
+#section {
+  width: 350px;
+  height: 80px;
+  position: relative;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#section img {
+  position: absolute;
+  bottom: 0;
+}
+#section > p {
+  position: absolute;
+  left: 75px;
+  font-size: 14px;
+  color: #fff;
+}
+#section > p:nth-of-type(1) {
+  bottom: 40%;
+  color: #999999;
+}
+#section > p:nth-of-type(2) {
+  bottom: 21%;
+  font-weight: bolder;
+  color: #000;
+}
+/* 입력칸 */
+.u_id input,
+.u_pwd input,
+.login_sub input {
+  width: 350px;
+  height: 45px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  outline: none;
+  border: none;
+}
+
+.u_id input,
+.u_pwd input {
+  border-bottom: 1px solid #eaeaea;
+  padding-left: 20px;
+}
+.u_id input:focus,
+.u_pwd input:focus {
+  border-color: #00c930;
+  border-width: 1.5px;
+}
+/* 회원가입 및 아이디/비번 찾기 */
+#find_join {
+  height: 28px;
+  margin-bottom: 10px;
+}
+#find_id {
+  font-size: 12px;
+  margin-left: 10px;
+  color: #333333;
+  float: left;
+}
+#join {
+  font-size: 12px;
+  margin-right: 10px;
+  float: right;
+  color: #333333;
+}
+#find_id:hover {
+  text-decoration: underline;
+}
+#join:hover {
+  text-decoration: underline;
+}
+/* 로그인 버튼 */
+.login_sub input {
+  background-color: #6837f8;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.login_sub:hover input {
+  background-color: #512cc0;
+}
+/* sns 로그인 버튼 */
+.sns {
+  width: 100%;
+  height: auto;
+  float: left;
+  box-sizing: border-box;
+}
+
+.sns li {
+  margin-bottom: 8px;
+  border-radius: 30px;
+  position: relative;
+}
+.sns li span {
+  position: absolute;
+  top: 37%;
+  left: 20%;
+}
+.sns li:first-child {
+  background-color: #ffeb00;
+}
+.sns li:first-child img {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.sns li:last-child img {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+.sns li:first-child span {
+  color: #000;
+  font-weight: bold;
+}
+.sns li:last-child {
+  background-color: #00c930;
+}
+.sns li:last-child span {
+  color: #fff;
+  font-weight: bold;
+}
+/* 고객센터 안내 */
+.infor {
+  float: left;
+  text-align: left;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #2e3235;
+}
+.infor strong {
+  font-weight: bolder;
+  color: #000;
+}

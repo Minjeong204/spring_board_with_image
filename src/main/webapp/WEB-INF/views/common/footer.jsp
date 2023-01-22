@@ -1,23 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"   isELIgnored="false"
- %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>하단 부분</title>
-  <style>
-    p {
-     font-size:20px;
-      text-align:center;
-    }
-  </style>
-</head>
-<body>
-<p> e-mail:admin@test.com</p> 
-<p> 회사주소:서울시 강동구</p>
-<p>찾아오는 길:<a href="#">약도</a></p>
+	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:set var="contextPath" value="${pageContext.request.contextPath}" />
 
-</body>
+<!-- Footer -->
+<div class="footer-basic">
+	<footer>
+		<div class="social">
+			<a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i
+				class="icon ion-social-snapchat"></i></a><a href="#"><i
+				class="icon ion-social-twitter"></i></a><a href="#"><i
+				class="icon ion-social-facebook"></i></a>
+		</div>
+		<ul class="list-inline">
+			<li class="list-inline-item"><a href="${contextPath}/main.do">Home</a></li>
+			<li class="list-inline-item"><a
+				href="${contextPath}/member/memberForm.do">Join</a></li>
+			<li class="list-inline-item"><a href="#">About</a></li>
+			<li class="list-inline-item"><a href="#">Terms</a></li>
+			<li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+		</ul>
+		<p class="copyright">Company Name © 2023</p>
+	</footer>
+</div>
+
 </html>

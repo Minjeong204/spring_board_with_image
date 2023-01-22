@@ -21,7 +21,8 @@
 
 ### 시퀀스 다이어그램
 
-![image](https://user-images.githubusercontent.com/97210509/213924629-9bf7646e-3a36-4836-b283-7b29fb1bc8f0.png)
+![image](https://user-images.githubusercontent.com/97210509/213926010-8485a3e2-ed10-4c47-b311-d8985b0b5c8d.png)
+
 
 <br>게시판 관련 시퀀스 다이어그램
 

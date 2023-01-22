@@ -3,7 +3,8 @@
 # 💡 `Spring` PROJECT <img src="https://img.shields.io/badge/Java-11-pink"> <img src="https://img.shields.io/badge/JSP-2.3-hotpink"> <img src="https://img.shields.io/badge/Servlet-4.0-skyblue"> <img src="https://img.shields.io/badge/Tomcat-9.0.70-yellow"> <img src="https://img.shields.io/badge/Oracle-11.2.0.2.0-red"> <img src="[https://img.shields.io/badge/spring-3.1.1-pink"> <img src = "https://img.shields.io/badge/jquery-skyblue"> <img src = "https://img.shields.io/badge/css-3-orange"> <img src = "https://img.shields.io/badge/html-5-blue"> <img src ="https://img.shields.io/badge/eclipse-blue"> 
 
 ## 요구사항 명세서
-![image](https://user-images.githubusercontent.com/97210509/213353400-5df2e6a0-7ccf-4ba8-b4c2-35842caf5a61.png)
+![image](https://user-images.githubusercontent.com/97210509/213914113-7b36c119-090e-433f-85e9-0de61036763c.png)
+
 
 => 리뷰기능 추가를 위해 여러 이미지 첨부, 이미지 수정 기능 보류중
 

@@ -102,15 +102,17 @@
 	<insert id="insertNewArticle" parameterType="java.util.Map">
     <![CDATA[
       insert into t_board(articleNO, id, title, content, imageFileName)
-      values(#{articleNO}, #{id}, #{title}, #{content}, null)
+      values(#{articleNO},  #{id}, #{title}, #{content}, null)
     ]]>
 	</insert>
 
 	<insert id="insertNewImage" parameterType="java.util.Map">
 		<foreach item="item" collection="list" open="INSERT ALL"
 			separator=" " close="SELECT * FROM DUAL">
-			INTO t_imageFile(imageFileNO, imageFileName, articleNO, regDate)
-			VALUES (#{item.imageFileNO}, #{item.imageFileName}, #{item.articleNO},
+			INTO t_imageFile(imageFileNO, imageFileName,
+			articleNO, regDate)
+			VALUES (#{item.imageFileNO},
+			#{item.imageFileName}, #{item.articleNO},
 			sysdate)
 		</foreach>
 	</insert>

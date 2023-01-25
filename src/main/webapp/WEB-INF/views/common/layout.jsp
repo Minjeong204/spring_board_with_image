@@ -126,6 +126,15 @@ a {
 .btn-secondary a {
 	color: #fff;
 }
+
+.wrap {
+	margin-top: 50px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	margin-bottom: 50px;
+}
 </style>
 <title><tiles:insertAttribute name="title" /></title>
 </head>

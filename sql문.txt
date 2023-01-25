@@ -1,0 +1,42 @@
+drop table t_member CASCADE CONSTRAINTS;
+drop table t_board CASCADE CONSTRAINTS;
+drop table t_imageFile CASCADE CONSTRAINTS;
+
+create TABLE t_member(
+id varchar2(10) PRIMARY KEY,
+pwd varchar2(10),
+name varchar2(50),
+email varchar2(50),
+joinDate date default sysdate
+);
+
+insert into t_member VALUES('hong','1212','홍길동','hong@test.com',sysdate);
+insert into t_member VALUES('admin','1234','관리자','admin@test.com',sysdate);
+
+
+
+create table t_board(
+artticleNO number(10) primary key,
+parentNO number(10) DEFAULT 0,
+title varchar2(500) not null,
+content varchar2(4000),
+imageFileName varchar2(100),
+id varchar2(10),
+CONSTRAINT FK_ID FOREIGN KEY(id) REFERENCES t_member(id)
+);
+
+insert into t_board(articleNO, parentNO, title, content, imageFileName, writeDate, id) VALUES (1,0,'테스트글입니다','테스트글입니다.',null,sysdate,'hong');
+insert into t_board(articleNO, parentNO, title, content, imageFileName, writeDate, id) VALUES (2,0,'안녕하세요','상품후기입니다.',null,sysdate,'hong');
+insert into t_board(articleNO, parentNO, title, content, imageFileName, writeDate, id) VALUES (3,2,'답변입니다.','상품후기에 대한 답변입니다.',null,sysdate,'lee');
+insert into t_board(articleNO, parentNO, title, content, imageFileName, writeDate, id) VALUES (4,0,'김유신입니다.','테스트글입니다.',null,sysdate,'kim');
+insert into t_board(articleNO, parentNO, title, content, imageFileName, writeDate, id) VALUES (5,3,'답변','상품 좋습니다.',null,sysdate,'hong');
+
+create table t_imageFile(
+imageFileNO number(10) primary key,
+imageFileName varchar2(50),
+regDate date DEFAULT susdate,
+articleNO number(10), 
+CONSTRAINT FK_ARTICLENO FOREIGN KEY(articleNO) REFERENCES t_board(articleNO) ON DELETE CASCADE
+);
+
+commit;
